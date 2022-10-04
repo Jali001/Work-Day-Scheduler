@@ -1,15 +1,18 @@
 // Display today's day and date
+
 var todayDate = moment().format('dddd, MMM Do YYYY');
 $("#currentDay").html(todayDate);
 
  function tracker() {
         //code with get the current time 
         var currentTime = moment().hour();
+        console.log(currentTime);
+        console.log(typeof currentTime)
 
         // this code will loop over each of the timebars 
         $(".timebar").each(function () {
-            var block = parseInt($(this).attr("id").split("hour")[1]);
-
+            var block = parseInt($(this).attr("id").split("hour")[1]);  // --> ["hour", "8"]
+            console.log(block);
             // To check the time and add the classes for background indicators
             if (block < currentTime) {
                 $(this).removeClass("future");
@@ -25,17 +28,23 @@ $("#currentDay").html(todayDate);
                 $(this).removeClass("present");
                 $(this).removeClass("past");
                 $(this).addClass("future");
+            } 
 
-            }
         })
     }
 
 $(document).ready(function () {
     // saveBtn click listener 
+    // document.querySelector('.saveBtn').addEventListener("click", cb)
     $(".saveBtn").on("click", function () { 
+        console.log(this);
+        console.log($(this));
         // Get nearby values of the description in JQuery
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
+       // console.log($(this).siblings());
+       // console.log($(this).parent());
+
 
         // Save text in local storage
         localStorage.setItem(time, text);
@@ -57,3 +66,4 @@ $(document).ready(function () {
 
     tracker();
 })
+
