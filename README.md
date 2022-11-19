@@ -1,8 +1,8 @@
 # 05 Third-Party APIs: Work Day Scheduler
 
-## Links: https://jali001.github.io/Work-Day-Scheduler/
+## Links:
 
-Link to application:
+Link to application: https://jali001.github.io/Work-Day-Scheduler/
 
 ## User Story
 
