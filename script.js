@@ -39,8 +39,8 @@ $(document).ready(function () {
     $(".saveBtn").on("click", function () { 
         console.log(this);
         console.log($(this));
-        // Get nearby values of the description in JQuery
-        var text = $(this).siblings(".description").val();
+        // Get nearby values of the description in the box in JQuery
+        var text = $(this).siblings(".box").val();
         var time = $(this).parent().attr("id");
        // console.log($(this).siblings());
        // console.log($(this).parent());
@@ -53,16 +53,16 @@ $(document).ready(function () {
    
 
     // this code gets item from the local storage 
-    $("#hour8 .description").val(localStorage.getItem("hour8"));
-    $("#hour9 .description").val(localStorage.getItem("hour9"));
-    $("#hour10 .description").val(localStorage.getItem("hour10"));
-    $("#hour11 .description").val(localStorage.getItem("hour11"));
-    $("#hour12 .description").val(localStorage.getItem("hour12"));
-    $("#hour1 .description").val(localStorage.getItem("hour1"));
-    $("#hour2 .description").val(localStorage.getItem("hour2"));
-    $("#hour3 .description").val(localStorage.getItem("hour3"));
-    $("#hour4 .description").val(localStorage.getItem("hour4"));
-    $("#hour5 .description").val(localStorage.getItem("hour5"));
+    $("#hour8 .box").val(localStorage.getItem("hour8"));
+    $("#hour9 .box").val(localStorage.getItem("hour9"));
+    $("#hour10 .box").val(localStorage.getItem("hour10"));
+    $("#hour11 .box").val(localStorage.getItem("hour11"));
+    $("#hour12 .box").val(localStorage.getItem("hour12"));
+    $("#hour1 .box").val(localStorage.getItem("hour1"));
+    $("#hour2 .box").val(localStorage.getItem("hour2"));
+    $("#hour3 .box").val(localStorage.getItem("hour3"));
+    $("#hour4 .box").val(localStorage.getItem("hour4"));
+    $("#hour5 .box").val(localStorage.getItem("hour5"));
 
     tracker();
 })
